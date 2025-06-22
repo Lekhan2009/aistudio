@@ -3,8 +3,11 @@ import Project from "@/models/Project";
 import User from "@/models/User";
 import { ProjectForm } from "@/common.types";
 
+// ✅ Ensure serverUrl is defined for both environments
 const isProduction = process.env.NODE_ENV === 'production';
-const serverUrl = isProduction ? process.env.NEXT_PUBLIC_API_URL || 'https://aistudio-eta.vercel.app'
+const serverUrl = isProduction
+  ? process.env.NEXT_PUBLIC_API_URL || 'https://aistudio-eta.vercel.app'
+  : 'http://localhost:3000';
 
 export const createProject = async (form: ProjectForm, creatorId: string, token: string) => {
   try {
@@ -241,11 +244,17 @@ export const createUser = async (name: string, email: string, avatarUrl: string)
   }
 };
 
+// ✅ Improved error logging and validation
 export const fetchToken = async () => {
   try {
     const response = await fetch(`${serverUrl}/api/auth/token`);
+    if (!response.ok) {
+      const text = await response.text();
+      throw new Error(`Fetch failed: ${response.status} - ${text}`);
+    }
     return response.json();
   } catch (err) {
+    console.error("Error in fetchToken:", err);
     throw err;
   }
 };
@@ -254,12 +263,16 @@ export const uploadImage = async (imagePath: string) => {
   try {
     const response = await fetch(`${serverUrl}/api/upload`, {
       method: "POST",
-      body: JSON.stringify({
-        path: imagePath,
-      }),
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ path: imagePath }),
     });
+    if (!response.ok) {
+      const text = await response.text();
+      throw new Error(`Image upload failed: ${response.status} - ${text}`);
+    }
     return response.json();
   } catch (err) {
+    console.error("Error in uploadImage:", err);
     throw err;
   }
 };
