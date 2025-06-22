@@ -4,7 +4,7 @@ import User from "@/models/User";
 import { ProjectForm } from "@/common.types";
 
 const isProduction = process.env.NODE_ENV === 'production';
-const serverUrl = isProduction ? process.env.NEXT_PUBLIC_API_URL || 'https://aistudio-eta.vercel.app';
+const serverUrl = isProduction ? process.env.NEXT_PUBLIC_API_URL || 'https://aistudio-eta.vercel.app'
 
 export const createProject = async (form: ProjectForm, creatorId: string, token: string) => {
   try {
