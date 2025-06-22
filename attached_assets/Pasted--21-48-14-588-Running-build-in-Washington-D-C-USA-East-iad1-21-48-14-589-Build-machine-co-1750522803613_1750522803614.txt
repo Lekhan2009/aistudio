@@ -1,0 +1,59 @@
+[21:48:14.588] Running build in Washington, D.C., USA (East) – iad1
+[21:48:14.589] Build machine configuration: 2 cores, 8 GB
+[21:48:14.603] Cloning github.com/Lekhan2009/ai-studio (Branch: main, Commit: b5652b2)
+[21:48:14.774] Previous build caches not available
+[21:48:14.887] Cloning completed: 284.000ms
+[21:48:15.212] Running "vercel build"
+[21:48:15.661] Vercel CLI 43.3.0
+[21:48:16.024] Running "install" command: `npm install`...
+[21:48:27.412] 
+[21:48:27.412] added 232 packages, and audited 233 packages in 11s
+[21:48:27.413] 
+[21:48:27.413] 36 packages are looking for funding
+[21:48:27.413]   run `npm fund` for details
+[21:48:27.479] 
+[21:48:27.479] 3 vulnerabilities (2 moderate, 1 critical)
+[21:48:27.480] 
+[21:48:27.480] To address all issues, run:
+[21:48:27.480]   npm audit fix --force
+[21:48:27.480] 
+[21:48:27.481] Run `npm audit` for details.
+[21:48:27.528] Detected Next.js version: 13.4.6
+[21:48:27.530] Running "npm run build"
+[21:48:27.675] 
+[21:48:27.678] > flexibble@0.1.0 build
+[21:48:27.679] > next build
+[21:48:27.679] 
+[21:48:28.111] - warn You have enabled experimental features (serverComponentsExternalPackages, esmExternals) in next.config.js.
+[21:48:28.113] - warn Experimental features are not covered by semver, and may cause unexpected or broken application behavior. Use at your own risk.
+[21:48:28.113] 
+[21:48:28.126] Attention: Next.js now collects completely anonymous telemetry regarding usage.
+[21:48:28.126] This information is used to shape Next.js' roadmap and prioritize features.
+[21:48:28.126] You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+[21:48:28.126] https://nextjs.org/telemetry
+[21:48:28.127] 
+[21:48:28.208] - info Creating an optimized production build...
+[21:48:45.179] Browserslist: caniuse-lite is outdated. Please run:
+[21:48:45.180]   npx update-browserslist-db@latest
+[21:48:45.180]   Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[21:48:48.572] Browserslist: caniuse-lite is outdated. Please run:
+[21:48:48.573]   npx browserslist@latest --update-db
+[21:48:48.573]   Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+[21:48:49.033] - info Compiled successfully
+[21:48:49.036] - info Linting and checking validity of types...
+[21:48:56.217] Failed to compile.
+[21:48:56.217] 
+[21:48:56.217] ./app/page.tsx:53:13
+[21:48:56.217] Type error: Type '{ key: string; id: string; image: string; title: string; name: string; avatarUrl: string; userId: string; }' is not assignable to type 'IntrinsicAttributes & Props'.
+[21:48:56.218]   Property 'id' does not exist on type 'IntrinsicAttributes & Props'.
+[21:48:56.218] 
+[21:48:56.218] [0m [90m 51 | [39m          [33m<[39m[33mProjectCard[39m[0m
+[21:48:56.218] [0m [90m 52 | [39m            key[33m=[39m{[32m`${project?.id}`[39m}[0m
+[21:48:56.218] [0m[31m[1m>[22m[39m[90m 53 | [39m            id[33m=[39m{project[33m?[39m[33m.[39mid}[0m
+[21:48:56.218] [0m [90m    | [39m            [31m[1m^[22m[39m[0m
+[21:48:56.218] [0m [90m 54 | [39m            image[33m=[39m{project[33m?[39m[33m.[39mimage}[0m
+[21:48:56.218] [0m [90m 55 | [39m            title[33m=[39m{project[33m?[39m[33m.[39mtitle}[0m
+[21:48:56.218] [0m [90m 56 | [39m            name[33m=[39m{project[33m?[39m[33m.[39mcreatedBy[33m.[39mname}[0m
+[21:48:56.304] Error: Command "npm run build" exited with 1
+[21:48:56.504] 
+[21:48:59.446] Exiting build container

@@ -1,0 +1,92 @@
+The Netlify deploy errored, with the following guidance provided:
+
+**Diagnosis:**
+The build failure is due to a syntax error in the file `lib/session.ts` at line 775.
+
+**Solution:**
+In the file `lib/session.ts` at [line 775](https://github.com/Lekhan2009/ai-studio/blob/main/lib/session.ts#L775), there seems to be a missing semicolon, '}', or end of file indicated by the error message "Expected ';', '}' or <eof>". Please check the syntax around this line and ensure that it is correct. Fixing this syntax error should allow the build to succeed.
+
+Additionally, as a good practice, always ensure that the necessary dependencies are correctly imported in the file and check for any other syntax issues that might be present in the file.
+
+Make the necessary corrections, push the changes to the repository, and trigger a new build to verify if the issue has been resolved.
+
+The relevant error logs are:
+
+Line 0: Waiting for other deploys from your team to complete. Check the queue: https://app.netlify.com/teams/lekhan2009/builds
+Line 1: build-image version: b4a14dfbcd8b107dda361870fa2c4c1e6a145af1 (noble)
+Line 2: buildbot version: b4a14dfbcd8b107dda361870fa2c4c1e6a145af1
+Line 3: Fetching cached dependencies
+Line 4: Failed to fetch cache, continuing with build
+Line 5: Starting to prepare the repo for build
+Line 6: No cached dependencies found. Cloning fresh repo
+Line 7: git clone --filter=blob:none https://github.com/Lekhan2009/ai-studio
+Line 8: Preparing Git Reference refs/heads/main
+Line 9: Starting to install dependencies
+Line 10: Ruby version set to 3.4.3
+Line 11: Go version set to 1.24.4
+Line 12: Using PHP version
+Line 13: v22.16.0 is already installed.
+Line 14: Now using node v22.16.0 (npm v10.9.2)
+Line 60: [96m[1mBuild command from Netlify app                                [22m[39m
+Line 61: [96m[1m────────────────────────────────────────────────────────────────[22m[39m
+Line 62: ​
+Line 63: [36m$ npm run build[39m
+Line 64: > flexibble@0.1.0 build
+Line 65: > next build
+Line 66: - [33mwarn[39m [1mYou have enabled experimental features (serverComponentsExternalPackages, esmExternals) in next.config.js.
+Line 67: - [33mwarn[39m Experimental features are not covered by semver, and may cause unexpected or broken application behavior. Use a
+Line 68: - [33mwarn[39m No build cache found. Please configure build caching for faster rebuilds. Read more: https://nextjs.org/docs/me
+Line 69: - [36minfo[39m Creating an optimized production build...
+Line 70: [31mFailed to compile.[39m
+Line 71: [31m[39m
+Line 72: ./lib/session.ts
+Line 73: Error:
+Line 74:   [31mx[0m Expected ';', '}' or <eof>
+Line 75:      ,-[[36;1;4m/opt/build/repo/lib/session.ts[0m:775:1]
+Line 76:  [2m775[0m |
+Line 77:  [2m776[0m |       return session as SessionInterface;
+Line 78:  [2m777[0m |     }
+Line 79:  [2m778[0m | [31;1m,[0m[31;1m-[0m[31;1m>[0m ```
+ [2m779[0m | [31;1m|[0m   
+ [2m780[0m | [31;1m|[0m   The final c
+Line 80:      : [31;1m`[0m[31;1m---[0m[33;1m   ^^^^^^^^^^[0m
+     : [31;1m`[0m[31;1m---[0m[31;1m-[0m [31;1mThis is the expre
+Line 81:  [2m782[0m |     import { getServerSession } from "next-auth/next";
+Line 82:  [2m783[0m |     import { NextAuthOptions, User } from "next-auth";
+Line 83:  [2m784[0m |     import GoogleProvider from "next-auth/providers/google";
+Line 84:      `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./lib/session.ts
+./app/api/auth/[...nextauth]/route.
+Line 85: > Build failed because of webpack errors
+Line 86: Failed during stage 'building site': Build script returned non-zero exit code: 2
+Line 87: [91m[1m​[22m[39m
+Line 88: [91m[1m"build.command" failed                                        [22m[39m
+Line 89: [91m[1m────────────────────────────────────────────────────────────────[22m[39m
+Line 90: ​
+Line 91:   [31m[1mError message[22m[39m
+Line 92:   Command failed with exit code 1: npm run build
+Line 93: ​
+Line 94:   [31m[1mError location[22m[39m
+Line 95:   In Build command from Netlify app:
+Line 96:   npm run build
+Line 97: ​
+Line 98:   [31m[1mResolved config[22m[39m
+Line 99:   build:
+Line 100:     command: npm run build
+Line 101:     commandOrigin: ui
+Line 102:     environment:
+Line 103:       - NEXT_PRIVATE_TARGET
+Line 104:     publish: /opt/build/repo/.next
+Line 105:     publishOrigin: ui
+Line 106:   plugins:
+Line 107:     - inputs: {}
+Line 108:       origin: ui
+Line 109:       package: '@netlify/plugin-nextjs'
+Line 110: Build failed due to a user error: Build script returned non-zero exit code: 2
+Line 111: Failing build: Failed to build site
+Line 112: Finished processing build request in 57.491s

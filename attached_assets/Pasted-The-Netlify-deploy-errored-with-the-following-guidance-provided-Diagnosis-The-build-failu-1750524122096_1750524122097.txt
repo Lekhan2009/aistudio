@@ -1,0 +1,41 @@
+The Netlify deploy errored, with the following guidance provided:
+
+**Diagnosis:**
+The build failure is due to a type error in the file "session.ts" at line 24, causing the build to fail during the compilation process.
+
+**Solution:**
+1. Navigate to the file [lib/session.ts](https://github.com/Lekhan2009/ai-studio/blob/main/lib/session.ts) in the repo.
+2. Inspect line 24 at the specified column (13) to identify the type error.
+3. Fix the type error in the "session.ts" file to resolve the compilation failure.
+
+The relevant error logs are:
+
+Line 0: Waiting for other deploys from your team to complete. Check the queue: https://app.netlify.com/teams/lekhan2009/builds
+Line 1: build-image version: b4a14dfbcd8b107dda361870fa2c4c1e6a145af1 (noble)
+Line 2: buildbot version: b4a14dfbcd8b107dda361870fa2c4c1e6a145af1
+Line 3: Fetching cached dependencies
+Line 4: Failed to fetch cache, continuing with build
+Line 5: Starting to prepare the repo for build
+Line 6: No cached dependencies found. Cloning fresh repo
+Line 7: git clone --filter=blob:none https://github.com/Lekhan2009/ai-studio
+Line 8: Preparing Git Reference refs/heads/main
+Line 9: Starting to install dependencies
+Line 10: Ruby version set to 3.4.3
+Line 11: Go version set to 1.24.4
+Line 12: Using PHP version
+Line 13: v22.16.0 is already installed.
+Line 14: Now using node v22.16.0 (npm v10.9.2)
+Line 68: - [33mwarn[39m No build cache found. Please configure build caching for faster rebuilds. Read more: https://nextjs.org/docs/me
+Line 69: - [36minfo[39m Creating an optimized production build...
+Line 70: Browserslist: caniuse-lite is outdated. Please run:
+Line 71:   npx update-browserslist-db@latest
+Line 72:   Why you should do it regularly: https://github.com/browserslist/update-db#readme
+Line 73: Browserslist: caniuse-lite is outdated. Please run:
+Line 74:   npx browserslist@latest --update-db
+Line 75:   Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+Line 76: - [36minfo[39m Compiled successfully
+Line 77: - [36minfo[39m Linting and checking validity of types...
+Line 78: [31mFailed to compile.[39m
+Line 79: [31m[39m
+Line 80: [36m./lib/session.ts[39m:[33m24[39m:[33m13[39m
+Line 81: [31m[1mType error[22m[39m: Type '{ id: any; avatarUrl: any; name?: string | null | undefined; email?: string | null | undefi

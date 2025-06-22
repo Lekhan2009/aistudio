@@ -1,0 +1,86 @@
+The Netlify deploy errored, with the following guidance provided:
+
+### Diagnosis
+The build failed due to a type error in the file "app/page.tsx" at line 80-82. The error is: `Property 'id' does not exist on type 'IntrinsicAttributes & Props'`.
+
+### Solution
+To resolve this issue:
+1. Verify that the `id` property is properly defined in the `Props` type.
+2. If the `id` property is correctly defined, ensure it is accessed properly within the component.
+3. If the `project` object might be `undefined`, use optional chaining (`project?.id`) to access its properties safely.
+
+Make sure to address the type error in the "app/page.tsx" file to fix the build failure.
+
+The relevant error logs are:
+
+Line 0: build-image version: b4a14dfbcd8b107dda361870fa2c4c1e6a145af1 (noble)
+Line 1: buildbot version: b4a14dfbcd8b107dda361870fa2c4c1e6a145af1
+Line 2: Fetching cached dependencies
+Line 3: Failed to fetch cache, continuing with build
+Line 4: Starting to prepare the repo for build
+Line 5: No cached dependencies found. Cloning fresh repo
+Line 6: git clone --filter=blob:none https://github.com/Lekhan2009/ai-studio
+Line 7: Preparing Git Reference refs/heads/main
+Line 8: Starting to install dependencies
+Line 9: Ruby version set to 3.4.3
+Line 10: Go version set to 1.24.4
+Line 11: Using PHP version
+Line 12: v22.16.0 is already installed.
+Line 13: Now using node v22.16.0 (npm v10.9.2)
+Line 59: [96m[1mBuild command from Netlify app                                [22m[39m
+Line 60: [96m[1m────────────────────────────────────────────────────────────────[22m[39m
+Line 61: ​
+Line 62: [36m$ npm run build[39m
+Line 63: > flexibble@0.1.0 build
+Line 64: > next build
+Line 65: - [33mwarn[39m [1mYou have enabled experimental features (serverComponentsExternalPackages, esmExternals) in next.config.js.
+Line 66: - [33mwarn[39m Experimental features are not covered by semver, and may cause unexpected or broken application behavior. Use a
+Line 67: - [33mwarn[39m No build cache found. Please configure build caching for faster rebuilds. Read more: https://nextjs.org/docs/me
+Line 68: - [36minfo[39m Creating an optimized production build...
+Line 69: Failed during stage 'building site': Build script returned non-zero exit code: 2
+Line 70: Browserslist: caniuse-lite is outdated. Please run:
+Line 71:   npx update-browserslist-db@latest
+Line 72:   Why you should do it regularly: https://github.com/browserslist/update-db#readme
+Line 73: Browserslist: caniuse-lite is outdated. Please run:
+Line 74:   npx browserslist@latest --update-db
+Line 75:   Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+Line 76: - [36minfo[39m Compiled successfully
+Line 77: - [36minfo[39m Linting and checking validity of types...
+Line 78: [31mFailed to compile.[39m
+Line 79: [31m[39m
+Line 80: [36m./app/page.tsx[39m:[33m53[39m:[33m13[39m
+Line 81: [31m[1mType error[22m[39m: Type '{ key: string; id: string; image: string; title: string; name: string; avatarUrl: string; u
+Line 82:   Property 'id' does not exist on type 'IntrinsicAttributes & Props'.
+Line 83: [0m [90m 51 | [39m          [33m<[39m[33mProjectCard[39m[0m
+Line 84: [0m [90m 52 | [39m            key[33m=[39m{[32m`${project?.id}`[39m}[0m
+Line 85: [0m[31m[1m>[22m[39m[90m 53 | [39m            id[33m=[39m{project[33m?[39m[33m.[39mid}[0m
+Line 86: [0m [90m    | [39m            [31m[1m^[22m[39m[0m
+Line 87: [0m [90m 54 | [39m            image[33m=[39m{project[33m?[39m[33m.[39mimage}[0m
+Line 88: [0m [90m 55 | [39m            title[33m=[39m{project[33m?[39m[33m.[39mtitle}[0m
+Line 89: [0m [90m 56 | [39m            name[33m=[39m{project[33m?[39m[33m.[39mcreatedBy[33m.[39mname}[0m
+Line 90: [91m[1m​[22m[39m
+Line 91: [91m[1m"build.command" failed                                        [22m[39m
+Line 92: [91m[1m────────────────────────────────────────────────────────────────[22m[39m
+Line 93: ​
+Line 94:   [31m[1mError message[22m[39m
+Line 95:   Command failed with exit code 1: npm run build
+Line 96: ​
+Line 97:   [31m[1mError location[22m[39m
+Line 98:   In Build command from Netlify app:
+Line 99:   npm run build
+Line 100: ​
+Line 101:   [31m[1mResolved config[22m[39m
+Line 102:   build:
+Line 103:     command: npm run build
+Line 104:     commandOrigin: ui
+Line 105:     environment:
+Line 106:       - NEXT_PRIVATE_TARGET
+Line 107:     publish: /opt/build/repo/.next
+Line 108:     publishOrigin: ui
+Line 109:   plugins:
+Line 110:     - inputs: {}
+Line 111:       origin: ui
+Line 112:       package: '@netlify/plugin-nextjs'
+Line 113: Build failed due to a user error: Build script returned non-zero exit code: 2
+Line 114: Failing build: Failed to build site
+Line 115: Finished processing build request in 54.353s

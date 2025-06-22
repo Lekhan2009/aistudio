@@ -1,0 +1,170 @@
+[21:31:03.750] Running build in Washington, D.C., USA (East) – iad1
+[21:31:03.751] Build machine configuration: 2 cores, 8 GB
+[21:31:03.799] Cloning github.com/Lekhan2009/ai-studio (Branch: main, Commit: b41c2db)
+[21:31:04.575] Previous build caches not available
+[21:31:04.700] Cloning completed: 901.000ms
+[21:31:06.078] Running "vercel build"
+[21:31:06.641] Vercel CLI 43.3.0
+[21:31:07.684] Installing dependencies...
+[21:31:16.756] 
+[21:31:16.757] added 232 packages in 9s
+[21:31:16.757] 
+[21:31:16.757] 36 packages are looking for funding
+[21:31:16.758]   run `npm fund` for details
+[21:31:16.801] Detected Next.js version: 13.4.6
+[21:31:16.804] Running "npm run build"
+[21:31:16.915] 
+[21:31:16.916] > flexibble@0.1.0 build
+[21:31:16.916] > next build
+[21:31:16.916] 
+[21:31:17.308] - warn You have enabled experimental feature (serverComponentsExternalPackages) in next.config.js.
+[21:31:17.309] - warn Experimental features are not covered by semver, and may cause unexpected or broken application behavior. Use at your own risk.
+[21:31:17.309] 
+[21:31:17.321] Attention: Next.js now collects completely anonymous telemetry regarding usage.
+[21:31:17.321] This information is used to shape Next.js' roadmap and prioritize features.
+[21:31:17.321] You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+[21:31:17.321] https://nextjs.org/telemetry
+[21:31:17.321] 
+[21:31:17.394] - info Creating an optimized production build...
+[21:31:33.252] Browserslist: caniuse-lite is outdated. Please run:
+[21:31:33.253]   npx update-browserslist-db@latest
+[21:31:33.253]   Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[21:31:36.560] Browserslist: caniuse-lite is outdated. Please run:
+[21:31:36.560]   npx browserslist@latest --update-db
+[21:31:36.560]   Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+[21:31:37.118] - warn Compiled with warnings
+[21:31:37.118] 
+[21:31:37.118] ./components/ProjectForm.tsx
+[21:31:37.119] Attempted import error: 'createNewProject' is not exported from '@/lib/actions' (imported as 'createNewProject').
+[21:31:37.119] 
+[21:31:37.119] Import trace for requested module:
+[21:31:37.119] ./components/ProjectForm.tsx
+[21:31:37.119] 
+[21:31:37.119] ./node_modules/debug/src/node.js
+[21:31:37.119] Module not found: ESM packages (supports-color) need to be imported. Use 'import' to reference the package instead. https://nextjs.org/docs/messages/import-esm-externals
+[21:31:37.119] 
+[21:31:37.119] Import trace for requested module:
+[21:31:37.119] ./node_modules/debug/src/node.js
+[21:31:37.120] ./node_modules/debug/src/index.js
+[21:31:37.120] ./node_modules/mquery/lib/mquery.js
+[21:31:37.120] ./node_modules/mongoose/lib/mongoose.js
+[21:31:37.120] ./node_modules/mongoose/lib/index.js
+[21:31:37.120] ./node_modules/mongoose/index.js
+[21:31:37.120] ./lib/mongodb.ts
+[21:31:37.120] ./lib/actions.ts
+[21:31:37.120] ./components/ProjectActions.tsx
+[21:31:37.120] 
+[21:31:37.120] ./node_modules/mongodb/lib/deps.js
+[21:31:37.121] Module not found: Can't resolve 'kerberos' in '/vercel/path0/node_modules/mongodb/lib'
+[21:31:37.121] 
+[21:31:37.121] Import trace for requested module:
+[21:31:37.121] ./node_modules/mongodb/lib/deps.js
+[21:31:37.121] ./node_modules/mongodb/lib/client-side-encryption/client_encryption.js
+[21:31:37.121] ./node_modules/mongodb/lib/index.js
+[21:31:37.121] ./node_modules/mongoose/lib/index.js
+[21:31:37.121] ./node_modules/mongoose/index.js
+[21:31:37.121] ./lib/mongodb.ts
+[21:31:37.121] ./lib/actions.ts
+[21:31:37.121] ./components/ProjectActions.tsx
+[21:31:37.122] 
+[21:31:37.122] ./node_modules/mongodb/lib/deps.js
+[21:31:37.122] Module not found: Can't resolve '@mongodb-js/zstd' in '/vercel/path0/node_modules/mongodb/lib'
+[21:31:37.122] 
+[21:31:37.122] Import trace for requested module:
+[21:31:37.126] ./node_modules/mongodb/lib/deps.js
+[21:31:37.126] ./node_modules/mongodb/lib/client-side-encryption/client_encryption.js
+[21:31:37.126] ./node_modules/mongodb/lib/index.js
+[21:31:37.127] ./node_modules/mongoose/lib/index.js
+[21:31:37.127] ./node_modules/mongoose/index.js
+[21:31:37.127] ./lib/mongodb.ts
+[21:31:37.127] ./lib/actions.ts
+[21:31:37.127] ./components/ProjectActions.tsx
+[21:31:37.127] 
+[21:31:37.127] ./node_modules/mongodb/lib/deps.js
+[21:31:37.127] Module not found: Can't resolve '@aws-sdk/credential-providers' in '/vercel/path0/node_modules/mongodb/lib'
+[21:31:37.127] 
+[21:31:37.127] Import trace for requested module:
+[21:31:37.127] ./node_modules/mongodb/lib/deps.js
+[21:31:37.128] ./node_modules/mongodb/lib/client-side-encryption/client_encryption.js
+[21:31:37.128] ./node_modules/mongodb/lib/index.js
+[21:31:37.128] ./node_modules/mongoose/lib/index.js
+[21:31:37.128] ./node_modules/mongoose/index.js
+[21:31:37.131] ./lib/mongodb.ts
+[21:31:37.131] ./lib/actions.ts
+[21:31:37.132] ./components/ProjectActions.tsx
+[21:31:37.132] 
+[21:31:37.132] ./node_modules/mongodb/lib/deps.js
+[21:31:37.132] Module not found: Can't resolve 'gcp-metadata' in '/vercel/path0/node_modules/mongodb/lib'
+[21:31:37.132] 
+[21:31:37.132] Import trace for requested module:
+[21:31:37.132] ./node_modules/mongodb/lib/deps.js
+[21:31:37.132] ./node_modules/mongodb/lib/client-side-encryption/client_encryption.js
+[21:31:37.132] ./node_modules/mongodb/lib/index.js
+[21:31:37.132] ./node_modules/mongoose/lib/index.js
+[21:31:37.132] ./node_modules/mongoose/index.js
+[21:31:37.132] ./lib/mongodb.ts
+[21:31:37.132] ./lib/actions.ts
+[21:31:37.132] ./components/ProjectActions.tsx
+[21:31:37.133] 
+[21:31:37.133] ./node_modules/mongodb/lib/deps.js
+[21:31:37.133] Module not found: Can't resolve 'snappy' in '/vercel/path0/node_modules/mongodb/lib'
+[21:31:37.133] 
+[21:31:37.133] Import trace for requested module:
+[21:31:37.133] ./node_modules/mongodb/lib/deps.js
+[21:31:37.133] ./node_modules/mongodb/lib/client-side-encryption/client_encryption.js
+[21:31:37.133] ./node_modules/mongodb/lib/index.js
+[21:31:37.133] ./node_modules/mongoose/lib/index.js
+[21:31:37.133] ./node_modules/mongoose/index.js
+[21:31:37.133] ./lib/mongodb.ts
+[21:31:37.133] ./lib/actions.ts
+[21:31:37.133] ./components/ProjectActions.tsx
+[21:31:37.133] 
+[21:31:37.133] ./node_modules/mongodb/lib/deps.js
+[21:31:37.134] Module not found: Can't resolve 'aws4' in '/vercel/path0/node_modules/mongodb/lib'
+[21:31:37.134] 
+[21:31:37.134] Import trace for requested module:
+[21:31:37.134] ./node_modules/mongodb/lib/deps.js
+[21:31:37.134] ./node_modules/mongodb/lib/client-side-encryption/client_encryption.js
+[21:31:37.134] ./node_modules/mongodb/lib/index.js
+[21:31:37.134] ./node_modules/mongoose/lib/index.js
+[21:31:37.134] ./node_modules/mongoose/index.js
+[21:31:37.134] ./lib/mongodb.ts
+[21:31:37.134] ./lib/actions.ts
+[21:31:37.134] ./components/ProjectActions.tsx
+[21:31:37.134] 
+[21:31:37.134] ./node_modules/mongodb/lib/deps.js
+[21:31:37.135] Module not found: Can't resolve 'mongodb-client-encryption' in '/vercel/path0/node_modules/mongodb/lib'
+[21:31:37.135] 
+[21:31:37.136] Import trace for requested module:
+[21:31:37.136] ./node_modules/mongodb/lib/deps.js
+[21:31:37.136] ./node_modules/mongodb/lib/client-side-encryption/client_encryption.js
+[21:31:37.136] ./node_modules/mongodb/lib/index.js
+[21:31:37.136] ./node_modules/mongoose/lib/index.js
+[21:31:37.136] ./node_modules/mongoose/index.js
+[21:31:37.136] ./lib/mongodb.ts
+[21:31:37.136] ./lib/actions.ts
+[21:31:37.136] ./components/ProjectActions.tsx
+[21:31:37.136] 
+[21:31:37.137] ./components/ProjectForm.tsx
+[21:31:37.137] Attempted import error: 'createNewProject' is not exported from '@/lib/actions' (imported as 'createNewProject').
+[21:31:37.137] 
+[21:31:37.137] Import trace for requested module:
+[21:31:37.137] ./components/ProjectForm.tsx
+[21:31:37.139] 
+[21:31:37.139] - info Linting and checking validity of types...
+[21:31:43.572] Failed to compile.
+[21:31:43.572] 
+[21:31:43.573] ./app/page.tsx:33:16
+[21:31:43.573] Type error: Conversion of type '{ projects: any[]; pageInfo: { hasNextPage: boolean; hasPreviousPage: boolean; startCursor: string; endCursor: string | null; }; }' to type 'ProjectSearch' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+[21:31:43.573]   Property 'projectSearch' is missing in type '{ projects: any[]; pageInfo: { hasNextPage: boolean; hasPreviousPage: boolean; startCursor: string; endCursor: string | null; }; }' but required in type 'ProjectSearch'.
+[21:31:43.573] 
+[21:31:43.573] [0m [90m 31 | [39m[0m
+[21:31:43.573] [0m [90m 32 | [39m[36mconst[39m [33mHome[39m [33m=[39m [36masync[39m ({ searchParams[33m:[39m { category[33m,[39m endCursor } }[33m:[39m [33mProps[39m) [33m=>[39m {[0m
+[21:31:43.573] [0m[31m[1m>[22m[39m[90m 33 | [39m  [36mconst[39m data [33m=[39m [36mawait[39m getProjects(category[33m,[39m endCursor) [36mas[39m [33mProjectSearch[39m[33m;[39m[0m
+[21:31:43.573] [0m [90m    | [39m               [31m[1m^[22m[39m[0m
+[21:31:43.573] [0m [90m 34 | [39m[0m
+[21:31:43.573] [0m [90m 35 | [39m  [36mconst[39m projectsToDisplay [33m=[39m data[33m?[39m[33m.[39mprojectSearch[33m?[39m[33m.[39medges [33m||[39m [][33m;[39m[0m
+[21:31:43.573] [0m [90m 36 | [39m[0m
+[21:31:43.657] Error: Command "npm run build" exited with 1
+[21:31:43.864] 
+[21:31:46.937] Exiting build container
